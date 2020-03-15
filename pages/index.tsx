@@ -295,7 +295,7 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
 }
 
 Index.getInitialProps = async function () {
-  const res = await fetch('https://raw.githubusercontent.com/stodi1/corona_virus_open_data/master/data.json');
+  const res = await fetch('https://raw.githubusercontent.com/ramy150/corona_virus_open_data/master/data.json');
   const data = await res.json();
   const confirmed = data.confirmed.map((i:Confirmed) => ({...i, infectionSourceCountry: i.infectionSourceCountry === "" ? null : i.infectionSourceCountry}))
   return {...data, confirmed};
