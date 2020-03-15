@@ -24,15 +24,15 @@ export const infectionColumns = [
   },
   {
     Header: 'Wilaya',
-    accessor: 'wilaya',
+    accessor: 'healthCareDistrict',
   },
   {
     Header: 'Source',
-    accessor: 'infection_source_country',
+    accessor: 'infectionSourceCountry',
   },
   {
     Header: 'Source of infection',
-    accessor: 'infection_source',
+    accessor: 'infectionSource',
     Cell: ({ cell: { value } }: any) => {
       if (value === 'unknown') {
         return 'Not known';

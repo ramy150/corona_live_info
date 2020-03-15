@@ -1,5 +1,5 @@
 {
-  "name": "korona-info",
+  "name": "corona-info",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,19 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valstu/korona-info.git"
+    "url": "git+https://github.com/ramy150/corona_live_info.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/valstu/korona-info/issues"
+    "url": "https://github.com/ramy150/corona_live_info/issues"
   },
-  "homepage": "https://github.com/valstu/korona-info#readme",
+  "homepage": "https://github.com/ramy150/corona_live_info#readme",
   "dependencies": {
     "@chakra-ui/core": "^0.6.1",
     "@emotion/core": "^10.0.28",

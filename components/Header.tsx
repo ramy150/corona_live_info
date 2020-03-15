@@ -32,7 +32,7 @@ const Header: React.FC = () => (
     <Box p={[2, 4, 5]} width={['100%', '100%', 2/3, 2/3]} textAlign="center">
       <Image src="/images/corona-virus-small.png" mb={0} title="CDC/ Alissa Eckert, MS; Dan Higgins, MAM / Public domain" alt="Kuvituskuva koronaviruksesta" borderWidth="0px" width="90px" />
       <Heading as="h1" color="rgb(51, 68, 85)" mb={[3, 3, 5]} mt={[3, 3, 2]} textAlign="center">Coronavirus infection in Algeria</Heading>
-      <Text mb={5} fontFamily="Space Mono" color="rgb(51, 68, 85, 0.8)">The information on this page is based on information gathered from Media. Data is updated every time new information becomes available.</Text>
+      <Text mb={5} fontFamily="Space Mono" color="rgb(51, 68, 85, 0.8)">The information on this page is based on information gathered from the media. The data is updated whenever new information becomes available.</Text>
     </Box>
   </Fragment>
 );

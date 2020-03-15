@@ -92,7 +92,7 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
   return (
     <Layout>
       <Head>
-        <title>Coronavirus infection in Finland – infections: {confirmed.length || 0} - recovered: {recovered.length || 0} - died: {deaths.length || 0}</title>
+        <title>Coronavirus infection in Algeria – infections: {confirmed.length || 0} - recovered: {recovered.length || 0} - died: {deaths.length || 0}</title>
         <meta name="description" content={`Suomen koronavirus-tartuntatilanne – tartunnat: ${confirmed.length || 0} - parantuneet: ${recovered.length || 0} - menehtyneet: ${deaths.length || 0}`} />
         <meta property="og:title" content={`Suomen koronavirus-tartuntatilanne`} />
         <meta property="og:description" content={`Tartuntoja tällä hetkellä: ${confirmed.length || 0} - parantuneet: ${recovered.length || 0} - menehtyneet: ${deaths.length || 0}`} />
@@ -205,7 +205,7 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
           </Box>
           */}
           <Box width={['100%', '100%', '100%', '100%', 1 / 2]} p={3}>
-            <Block title="Infections by hospital district" footer="Infections by hospital district">
+            <Block title="Infections by Wilaya" footer="Infections by Wilaya">
               <ResponsiveContainer width={'100%'} height={350}>
                 <BarChart
                   data={infectionsByDistrict}
@@ -223,30 +223,6 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
                       ))
                     }
                     <LabelList dataKey="infections" position="top" formatter={(e) => e} />
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </Block>
-          </Box>
-          <Box width={['100%', '100%', '100%', '100%', 1 / 2]} p={3}>
-            <Block title="Infections by hospital district / Size of the hospital district" footer="Infections by hospital district / Size of the hospital district">
-              <ResponsiveContainer width={'100%'} height={350}>
-                <BarChart
-                  data={infectionsByDistrictPercentage}
-                  margin={{
-                    top: 20, right: 30, left: 0, bottom: 85,
-                  }}
-                >
-                  <XAxis interval={0} dataKey="name" tick={<CustomizedAxisTick />} />
-                  <YAxis unit=" %" dataKey="perDistrict" tick={{ fontSize: 12 }} />
-                  <Tooltip />
-                  <Bar dataKey="perDistrict" name="%-osuus väestöstä" unit=" %">
-                    {
-                      areas.map((area, index) => (
-                        <Cell key={area} fill={colors[index % colors.length]} />
-                      ))
-                    }
-                    <LabelList dataKey="perDistict" position="top" formatter={(e) => e} />
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
@@ -276,8 +252,8 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
               </ResponsiveContainer>
             </Block>
           </Box>
-          <Box width={['100%', '100%', '100%', '100%', 1/2]} p={3}>
-            <Block title="Log of infections" footer="All infections in Algeria are listed, most recent first. Some id may be missing in the middle">
+          <Box width={['100%']} p={3}>
+            <Block title="Log of infections" footer="All infections in Algeria are listed, most recent first.">
               <Table height={350} data={reversedConfirmed} columns={useMemo(() => infectionColumns, [])} />
             </Block>
           </Box>

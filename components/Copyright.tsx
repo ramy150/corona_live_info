@@ -2,7 +2,10 @@ import { Box, Text, Link } from '@chakra-ui/core';
 
 const Copyright: React.FC = props => (
   <>
-    <Text mb="20px" my={5} px={5} fontSize="1em">Based on this GitHub project: <Link href="https://github.com/valstu/korona-info" isExternal color="teal.500">https://github.com/valstu/korona-info</Link> </Text>
+    <Text mb="1px" my={1} px={1} fontSize="1em">Based on this GitHub project: <Link href="https://github.com/ramy150/corona_live_info" isExternal color="teal.500">https://github.com/ramy150/corona_live_info</Link> </Text>
+      <Text mb="20px" my={1} px={1} fontSize="1em" style={{fontWeight: "bold"}}> The work is maintained by: <Link href="https://github.com/ramy150" isExternal color="teal.500">Rami Akrem Addad</Link> & <Link href="https://github.com/stodi1" isExternal color="teal.500">Abderrahmane Abada</Link> </Text>
+      <Text mb="1px" my={1} px={1} fontSize="1em">Inspired from this GitHub project: <Link href="https://github.com/valstu/korona-info" isExternal color="teal.500">https://github.com/valstu/korona-info</Link> </Text>
+
     <Box p={5} color="gray.500" m={0} fontSize="sm" mb={10} mt={0} textAlign="center" maxWidth="1040px">
       <p><a title="CDC/ Alissa Eckert, MS; Dan Higgins, MAM / Public domain" href="https://commons.wikimedia.org/wiki/File:2019-nCoV-CDC-23312_without_background.png">Corona virus image is a work of the Centers for Disease Control and Prevention, part of the United States Department of Health and Human Services, taken or made as part of an employee's official duties. As a work of the U.S. federal government, the image is in the public domain.<br /> <strong>Author: CDC/ Alissa Eckert, MS; Dan Higgins, MAM (Public Domain)</strong></a></p>
       <br />
