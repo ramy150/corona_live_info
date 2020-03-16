@@ -93,16 +93,15 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
     <Layout>
       <Head>
         <title>Coronavirus infection in Algeria / عدوى الفيروس coronavirus (COVID-19) في الجزائر – infections: {confirmed.length || 0} - recovered: {recovered.length || 0} - died: {deaths.length || 0}</title>
-        <meta name="description" content={`Suomen koronavirus-tartuntatilanne – tartunnat: ${confirmed.length || 0} - parantuneet: ${recovered.length || 0} - menehtyneet: ${deaths.length || 0}`} />
-        <meta property="og:title" content={`Suomen koronavirus-tartuntatilanne`} />
-        <meta property="og:description" content={`Tartuntoja tällä hetkellä: ${confirmed.length || 0} - parantuneet: ${recovered.length || 0} - menehtyneet: ${deaths.length || 0}`} />
+        <meta name="description" content={`Coronavirus infection in Algeria - infections: ${confirmed.length || 0} - Recovered: ${recovered.length || 0} - Deaths: ${deaths.length || 0}`} />
+        <meta property="og:title" content={`Coronavirus infection in Algeria`} />
+        <meta property="og:description" content={`Infections at the moment: ${confirmed.length || 0} - Recovered: ${recovered.length || 0} - Deaths: ${deaths.length || 0}`} />
         <meta property="og:site_name" content="Suomen koronavirus-tartuntatilanne" />
-        <meta property="og:locale" content="fi_FI" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/corona-virus.png" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1928" />
-        <meta property="og:url" content="https://korona.kans.io" />
+        <meta property="og:url" content="https://corona-algeria.now.sh/" />
       </Head>
       <Flex alignItems="center" flexDirection="column" flex="1" width={"100%"} maxWidth="1440px" margin="auto">
         <Header />
