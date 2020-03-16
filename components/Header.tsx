@@ -31,8 +31,12 @@ const Header: React.FC = () => (
     </Head>
     <Box p={[2, 4, 5]} width={['100%', '100%', 2/3, 2/3]} textAlign="center">
       <Image src="/images/corona-virus-small.png" mb={0} title="CDC/ Alissa Eckert, MS; Dan Higgins, MAM / Public domain" alt="Kuvituskuva koronaviruksesta" borderWidth="0px" width="90px" />
+        <Heading as="h1" color="rgb(51, 68, 85)" mb={[3, 3, 5]} mt={[3, 3, 2]} textAlign="center"> عدوى الفيروس كوفيد 19 في الجزائر</Heading>
+
       <Heading as="h1" color="rgb(51, 68, 85)" mb={[3, 3, 5]} mt={[3, 3, 2]} textAlign="center">Coronavirus infection in Algeria</Heading>
-      <Text mb={5} fontFamily="Space Mono" color="rgb(51, 68, 85, 0.8)">The information on this page is based on information gathered from the media. The data is updated whenever new information becomes available.</Text>
+        <Text mb={5} fontFamily="Space Mono" color="rgb(51, 68, 85, 0.8)" style={{direction: "rtl"}}>تستند المعلومات الواردة في هذه الصفحة إلى المعلومات التي تم جمعها من وزارة الصحة ووسيلة الإعلام TSA-Algerie. يتم تحديث البيانات كلما توفرت معلومات جديدة.</Text>
+
+      <Text mb={5} fontFamily="Space Mono" color="rgb(51, 68, 85, 0.8)">The information on this page is based on information gathered from the <Link href="http://www.sante.gov.dz/" isExternal color="teal.500">Ministry of Health Care</Link> and the media <Link href="https://www.tsa-algerie.com/societe/" isExternal color="teal.500">TSA-Algerie</Link>. The data is updated whenever new information becomes available.</Text>
     </Box>
   </Fragment>
 );

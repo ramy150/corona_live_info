@@ -92,7 +92,7 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
   return (
     <Layout>
       <Head>
-        <title>Coronavirus infection in Algeria – infections: {confirmed.length || 0} - recovered: {recovered.length || 0} - died: {deaths.length || 0}</title>
+        <title>Coronavirus infection in Algeria / عدوى الفيروس coronavirus (COVID-19) في الجزائر – infections: {confirmed.length || 0} - recovered: {recovered.length || 0} - died: {deaths.length || 0}</title>
         <meta name="description" content={`Suomen koronavirus-tartuntatilanne – tartunnat: ${confirmed.length || 0} - parantuneet: ${recovered.length || 0} - menehtyneet: ${deaths.length || 0}`} />
         <meta property="og:title" content={`Suomen koronavirus-tartuntatilanne`} />
         <meta property="og:description" content={`Tartuntoja tällä hetkellä: ${confirmed.length || 0} - parantuneet: ${recovered.length || 0} - menehtyneet: ${deaths.length || 0}`} />
@@ -108,23 +108,23 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
         <Header />
         <Flex flexWrap="wrap" flexDirection="row" justifyContent="center" alignItems="stretch" flex="1" width={"100%"}>
           <Box width={['100%', '100%', 1 / 3, 1 / 3]} p={3}>
-            <Block title="Infections" textAlign="center" extraInfo={`New infections today ${infectionsToday}`} footer={`Latest infection ${latestInfection} (${latestInfectionDistrict || 'unknown'})`}>
+            <Block title="Infections / إصابات" textAlign="center" extraInfo={`New infections today ${infectionsToday}`} footer={`Latest infection ${latestInfection} (${latestInfectionDistrict || 'unknown'})`}>
               <StatBlock count={confirmed.length} helpText={`New infections today: ${infectionsToday}`} />
             </Block>
           </Box>
           <Box width={['100%', '100%', 1 / 3, 1 / 3]} p={3}>
-            <Block title="Died" footer={latestDeath ? `Latest death ${latestDeath} (${latestDeathDistrict || 'unknown'})` : 'No death'}>
+            <Block title="Died / وفيات" footer={latestDeath ? `Latest death ${latestDeath} (${latestDeathDistrict || 'unknown'})` : 'No death'}>
               <StatBlock count={deaths.length || 0} />
             </Block>
           </Box>
           <Box width={['100%', '100%', 1 / 3, 1 / 3]} p={3}>
-            <Block title="Recovered" footer={latestRecovered ? `Latest recovery ${latestRecovered} (${latestRecoveredDistrict || 'unknown'})` : ' '}>
+            <Block title="Recovered / متعافين" footer={latestRecovered ? `Latest recovery ${latestRecovered} (${latestRecoveredDistrict || 'unknown'})` : ' '}>
               <StatBlock count={recovered.length || 0} />
             </Block>
           </Box>
           
           <Box width={['100%']} p={3}>
-            <Block title="Cumulative evolution (30 days)" footer="Cumulative evolution of infections, heals and deaths in the last 30 days">
+            <Block title="Cumulative evolution (30 days) / التطور التراكمي (30 يومًا)" footer="Cumulative evolution of infections, heals, and deaths in the last 30 days / التطور التراكمي للعدوى والشفاء والوفيات في آخر 30 يومًا">
             <ButtonGroup spacing={0} alignSelf="center" display="flex" justifyContent="center" marginTop="-15px">
               <Button size="xs" fontFamily="Space Grotesk Regular" px={3} letterSpacing="1px" borderRadius="4px 0px 0px 4px" borderWidth="0px" isActive={cumulativeChartScale === 'linear'} onClick={() => setCumulativeChartScale('linear')}>
                 Linear
@@ -205,7 +205,7 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
           </Box>
           */}
           <Box width={['100%', '100%', '100%', '100%', 1 / 2]} p={3}>
-            <Block title="Infections by Wilaya" footer="Infections by Wilaya">
+            <Block title="Infections by Wilaya / العدوى بالولاية" footer="Infections by Wilaya / العدوى بالولاية">
               <ResponsiveContainer width={'100%'} height={350}>
                 <BarChart
                   data={infectionsByDistrict}
@@ -229,7 +229,7 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
             </Block>
           </Box>
           <Box width={['100%', '100%', '100%', '100%', 1/2]} p={3}>
-            <Block title="Countries of origin of infections" footer="Number of infections by country of origin">
+            <Block title="Countries of origin of infections / دول منشأ العدوى" footer="Number of infections by country of origin / عدد الإصابات حسب بلد المنشأ">
               <ResponsiveContainer width={'100%'} height={350}>
                 <BarChart
                   data={infectionsBySourceCountry}
@@ -253,12 +253,12 @@ const Index: NextPage<KoronaData> = ({ confirmed, deaths, recovered }) => {
             </Block>
           </Box>
           <Box width={['100%']} p={3}>
-            <Block title="Log of infections" footer="All infections in Algeria are listed, most recent first.">
+            <Block title="Log of infections" footer="All infections in Algeria are listed, most recent first / يتم سرد جميع الإصابات في الجزائر، وآخرها أولاً">
               <Table height={350} data={reversedConfirmed} columns={useMemo(() => infectionColumns, [])} />
             </Block>
           </Box>
           <Box width={['100%']} p={3}>
-            <Block title="Infections' Networks" footer="The figure shows the infections as a network. The number is the serial number of the infection. If the direct vector is not known, the link will be linked to the country of origin. Infections for which the direct cause or the country of origin is not known are excluded. Infections marked in Algeria are most likely to be linked to other infection networks. The color of the cell indicates the country where the infection is likely to have occurred.">
+            <Block title="Infections' Networks / شبكات العدوى" footer="The figure shows the infections as a network. The number is the serial number of the infection. If the direct vector is not known, the link will be linked to the country of origin. Infections for which the direct cause or the country of origin is not known are excluded. Infections marked in Algeria are most likely to be linked to other infection networks. The color of the cell indicates the country where the infection is likely to have occurred.">
               <NetworkGraph data={networkGraphData} />
             </Block>
           </Box>
